@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="aquatic">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutorials — Veltrix IDE</title>
+  <meta name="description" content="50 free web development video tutorials from Beginner to Advanced. Learn HTML, CSS, JavaScript, TypeScript, React, Node.js and more.">
+  <meta name="theme-color" content="#070e1d">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <script>(function(){var t=localStorage.getItem('veltrix_theme')||'aquatic';document.documentElement.setAttribute('data-theme',t);})();</script>
+  <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+</script>
+</head>
+<body>
+
+<header>
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-wrap">
+      <a href="./index.html" class="nav-logo" aria-label="Veltrix IDE home">
+        <div class="logo-mark" aria-hidden="true">
+          <svg fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+          </svg>
+        </div>
+        <span>Veltrix IDE</span>
+      </a>
+      <ul class="nav-links" role="menubar">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./tutorials.html" class="active">Tutorials</a></li>
+        <li><a href="./lab.html">Lab</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <div id="nav-auth" class="nav-auth">
+          <button class="btn btn-ghost btn-sm" data-modal="modal-login">Log in</button>
+          <button class="btn btn-primary btn-sm" data-modal="modal-signup">Sign up</button>
+        </div>
+        <div id="nav-user" class="nav-user">
+          <div id="nav-avatar" class="nav-avatar"></div>
+          <span id="nav-uname" class="nav-uname"></span>
+          <button id="logout-btn" class="btn btn-ghost btn-sm">Logout</button>
+        </div>
+        <div class="theme-sel">
+          <button class="theme-btn" id="theme-btn" aria-haspopup="listbox" aria-label="Change theme">
+            <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"/>
+              <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+            <span class="t-label">Theme</span>
+          </button>
+          <div class="theme-dd" id="theme-dd" role="listbox"></div>
+        </div>
+        <button class="nav-ham" id="nav-ham" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-drawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <nav class="nav-drawer" id="nav-drawer" aria-label="Mobile navigation" aria-hidden="true">
+    <a href="./index.html">Home</a>
+    <a href="./tutorials.html" class="active">Tutorials</a>
+    <a href="./lab.html">Lab</a>
+    <a href="./about.html">About</a>
+    <a href="./contact.html">Contact</a>
+  </nav>
+</header>
+  <section style="max-width: 1000px; margin: 40px auto; padding: 30px; line-height: 1.8; text-align: left;">
+    
+    <article style="margin-bottom: 50px;">
+        <h2 style="color: #38bdf8; font-size: 2rem; margin-bottom: 15px;">1. The Evolution of HTML5: Building Modern Web Structures</h2>
+        <p>HyperText Markup Language (HTML) is the foundation of the World Wide Web. Since its inception in the early 90s, HTML has evolved from a simple text-formatting tool to a powerful multimedia platform. In <strong>Veltrix IDE</strong>, understanding the semantic structure of HTML5 is crucial for any developer.</p>
+        <p>HTML5 introduced semantic tags like <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;nav&gt;</code>, which help search engines (like Google) understand your content better. This is why well-structured HTML is a key component of Search Engine Optimization (SEO). Whether you are building a simple blog or a complex web application, your journey starts with a solid HTML skeleton.</p>
+        <ul>
+            <li><strong>Key Features:</strong> Semantic Elements, Multimedia Support (Audio/Video), and Offline Storage.</li>
+        </ul>
+    </article>
+
+    <hr style="border: 0; border-top: 1px solid #334155; margin: 40px 0;">
+
+    <article style="margin-bottom: 50px;">
+        <h2 style="color: #38bdf8; font-size: 2rem; margin-bottom: 15px;">2. Mastering CSS3: From Layouts to Animations</h2>
+        <p>Cascading Style Sheets (CSS) is what transforms a dry HTML document into a visually stunning experience. With the advent of CSS3, developers no longer rely on heavy images for shadows, gradients, or rounded corners. Everything is now code-driven, making websites faster and more responsive.</p>
+        <p>In our <strong>Veltrix IDE</strong> tutorials, we emphasize the importance of <strong>Flexbox</strong> and <strong>CSS Grid</strong>. These two layout systems have revolutionized how we align elements on a screen. Additionally, CSS animations and transitions allow you to create interactive user interfaces that keep visitors engaged without slowing down the browser.</p>
+        <p>A professional website must be responsive, meaning it looks great on an iPhone just as much as it does on a 4K monitor. CSS Media Queries make this possible by applying different styles based on the device's screen size.</p>
+    </article>
+
+    <hr style="border: 0; border-top: 1px solid #334155; margin: 40px 0;">
+
+    <article style="margin-bottom: 50px;">
+        <h2 style="color: #38bdf8; font-size: 2rem; margin-bottom: 15px;">3. JavaScript: The Engine of Interactive Web Apps</h2>
+        <p>If HTML is the body and CSS is the skin, then JavaScript is the brain. JavaScript (JS) allows you to implement complex features on web pages—every time a web page does more than just sit there and display static information, JavaScript is involved. It is a high-level, interpreted scripting language that is essential for modern web development.</p>
+        <p>In the <strong>Veltrix IDE</strong> environment, you can experiment with core JS concepts such as Variables, Loops, and Functions. But JS goes much deeper with <strong>Asynchronous Programming (APIs)</strong> and <strong>DOM Manipulation</strong>. DOM Manipulation allows your code to change the HTML and CSS of a page in real-time, creating a seamless user experience.</p>
+        <p>Mastering JavaScript opens doors to powerful frameworks like React, Vue, and Angular, which are used by tech giants like Facebook and Google to build their platforms.</p>
+    </article>
+
+</section>
+<section style="max-width: 900px; margin: 40px auto; padding: 20px; text-align: left;">
+    
+    <article style="margin-bottom: 30px;">
+        <h2 style="margin-bottom: 15px;">1. What is HTML? (The Skeleton of Web)</h2>
+        <p>HTML stands for HyperText Markup Language. It is the standard language for creating web pages. Think of it as the skeleton of a building. Without it, you cannot have a structure.</p>
+        <p>In <strong>Veltrix IDE</strong>, you can easily write HTML tags like headings, paragraphs, and divisions to build your first website. HTML is easy to learn and essential for every developer.</p>
+    </article>
+
+    <br><br>
+
+    <article style="margin-bottom: 30px;">
+        <h2 style="margin-bottom: 15px;">2. Styling with CSS</h2>
+        <p>CSS (Cascading Style Sheets) is what makes your website look beautiful. If HTML is the skeleton, CSS is the paint, the furniture, and the decoration. It controls the colors, fonts, and layout of your site.</p>
+    </article>
+
+    <br><br>
+
+    <article>
+        <h2 style="margin-bottom: 15px;">3. Power of JavaScript</h2>
+        <p>JavaScript is the brain of your website. It adds interactivity. In <strong>Veltrix IDE</strong>, you can practice logic, loops, and functions to make your projects come alive.</p>
+    </article>
+
+</section>
+<main>
+  <div class="container">
+
+    <!-- Page header -->
+    <div class="tut-hero">
+      <div class="s-chip" aria-hidden="true">Web Development Masterclass</div>
+      <h1>Tutorials</h1>
+      <p>50 structured video lessons — Beginner to Advanced. Filter by level and learn at your own pace.</p>
+    </div>
+
+    <!-- Filter bar -->
+    <div class="tut-filter" role="group" aria-label="Filter tutorials by level">
+      <div class="tut-pills">
+        <button class="tut-pill active" data-filter="all">All (50)</button>
+        <button class="tut-pill" data-filter="beginner">Beginner (15)</button>
+        <button class="tut-pill" data-filter="intermediate">Intermediate (20)</button>
+        <button class="tut-pill" data-filter="advanced">Advanced (15)</button>
+      </div>
+      <span class="tut-cnt" id="tut-count" aria-live="polite">50 lessons</span>
+    </div>
+
+    <!-- Cards grid -->
+    <div class="tut-grid" id="tut-grid">
+
+    <article class="tut-card" data-level="beginner">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/UrsmFxEIp5k?rel=0&modestbranding=1"
+          title="Introduction to Web Development"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 01">#01</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-b">Beginner</span>
+        <h3 class="tut-title">Introduction to Web Development</h3>
+        <a class="tut-watch" href="https://youtu.be/UrsmFxEIp5k" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="beginner">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/427pAhy9dI8?rel=0&modestbranding=1"
+          title="How Browsers and the Internet Work"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 02">#02</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-b">Beginner</span>
+        <h3 class="tut-title">How Browsers and the Internet Work</h3>
+        <a class="tut-watch" href="https://youtu.be/427pAhy9dI8" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="beginner">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/32DLasxoOiM?rel=0&modestbranding=1"
+          title="HTML Document Structure and Semantics"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 03">#03</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-b">Beginner</span>
+        <h3 class="tut-title">HTML Document Structure and Semantics</h3>
+        <a class="tut-watch" href="https://youtu.be/32DLasxoOiM" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="beginner">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/HcOc7P5BMi4?rel=0&modestbranding=1"
+          title="HTML Forms, Inputs and Accessibility"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 04">#04</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-b">Beginner</span>
+        <h3 class="tut-title">HTML Forms, Inputs and Accessibility</h3>
+        <a class="tut-watch" href="https://youtu.be/HcOc7P5BMi4" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="beginner">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/ESnrn1kAD4E?rel=0&modestbranding=1"
+          title="CSS Selectors, Properties and the Cascade"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 05">#05</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-b">Beginner</span>
+        <h3 class="tut-title">CSS Selectors, Properties and the Cascade</h3>
+        <a class="tut-watch" href="https://youtu.be/ESnrn1kAD4E" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="beginner">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/UmnCZ7-9yDY?rel=0&modestbranding=1"
+          title="The CSS Box Model Explained"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 06">#06</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-b">Beginner</span>
+        <h3 class="tut-title">The CSS Box Model Explained</h3>
+        <a class="tut-watch" href="https://youtu.be/UmnCZ7-9yDY" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="beginner">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/e7sAf4SbS_g?rel=0&modestbranding=1"
+          title="CSS Flexbox — Complete Guide"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 07">#07</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-b">Beginner</span>
+        <h3 class="tut-title">CSS Flexbox — Complete Guide</h3>
+        <a class="tut-watch" href="https://youtu.be/e7sAf4SbS_g" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="beginner">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/SuLiu5AK9Ps?rel=0&modestbranding=1"
+          title="CSS Grid — Complete Guide"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 08">#08</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-b">Beginner</span>
+        <h3 class="tut-title">CSS Grid — Complete Guide</h3>
+        <a class="tut-watch" href="https://youtu.be/SuLiu5AK9Ps" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="beginner">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/kvP6hDXWy88?rel=0&modestbranding=1"
+          title="Responsive Design and Media Queries"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 09">#09</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-b">Beginner</span>
+        <h3 class="tut-title">Responsive Design and Media Queries</h3>
+        <a class="tut-watch" href="https://youtu.be/kvP6hDXWy88" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="beginner">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/z8gIVootnUQ?rel=0&modestbranding=1"
+          title="JavaScript Variables, Types and Operators"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 10">#10</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-b">Beginner</span>
+        <h3 class="tut-title">JavaScript Variables, Types and Operators</h3>
+        <a class="tut-watch" href="https://youtu.be/z8gIVootnUQ" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="beginner">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/yZgwW6Yuc_E?rel=0&modestbranding=1"
+          title="JavaScript Functions and Scope"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 11">#11</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-b">Beginner</span>
+        <h3 class="tut-title">JavaScript Functions and Scope</h3>
+        <a class="tut-watch" href="https://youtu.be/yZgwW6Yuc_E" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="beginner">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/Jcbh07P0jHU?rel=0&modestbranding=1"
+          title="JavaScript Arrays and Objects"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 12">#12</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-b">Beginner</span>
+        <h3 class="tut-title">JavaScript Arrays and Objects</h3>
+        <a class="tut-watch" href="https://youtu.be/Jcbh07P0jHU" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="beginner">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/hlGoQC332VM?rel=0&modestbranding=1"
+          title="DOM Selection and Manipulation"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 13">#13</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-b">Beginner</span>
+        <h3 class="tut-title">DOM Selection and Manipulation</h3>
+        <a class="tut-watch" href="https://youtu.be/hlGoQC332VM" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="beginner">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/IiIgm_yaoOA?rel=0&modestbranding=1"
+          title="JavaScript Events and Event Listeners"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 14">#14</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-b">Beginner</span>
+        <h3 class="tut-title">JavaScript Events and Event Listeners</h3>
+        <a class="tut-watch" href="https://youtu.be/IiIgm_yaoOA" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="beginner">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/gfmRrPjnEw4?rel=0&modestbranding=1"
+          title="Git and GitHub for Beginners"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 15">#15</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-b">Beginner</span>
+        <h3 class="tut-title">Git and GitHub for Beginners</h3>
+        <a class="tut-watch" href="https://youtu.be/gfmRrPjnEw4" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="intermediate">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/t_ispmWmdjY?rel=0&modestbranding=1"
+          title="CSS Custom Properties (Variables)"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 16">#16</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-i">Intermediate</span>
+        <h3 class="tut-title">CSS Custom Properties (Variables)</h3>
+        <a class="tut-watch" href="https://youtu.be/t_ispmWmdjY" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="intermediate">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/OfngvXKNkpM?rel=0&modestbranding=1"
+          title="CSS Animations and Transitions"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 17">#17</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-i">Intermediate</span>
+        <h3 class="tut-title">CSS Animations and Transitions</h3>
+        <a class="tut-watch" href="https://youtu.be/OfngvXKNkpM" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="intermediate">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/ciGyHkDuPAE?rel=0&modestbranding=1"
+          title="ES6+ Modern JavaScript Features"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 18">#18</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-i">Intermediate</span>
+        <h3 class="tut-title">ES6+ Modern JavaScript Features</h3>
+        <a class="tut-watch" href="https://youtu.be/ciGyHkDuPAE" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="intermediate">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/dKlh0QXq6nk?rel=0&modestbranding=1"
+          title="Destructuring, Spread and Rest Operators"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 19">#19</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-i">Intermediate</span>
+        <h3 class="tut-title">Destructuring, Spread and Rest Operators</h3>
+        <a class="tut-watch" href="https://youtu.be/dKlh0QXq6nk" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="intermediate">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/Ulp1Kimblg0?rel=0&modestbranding=1"
+          title="JavaScript Modules — Import and Export"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 20">#20</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-i">Intermediate</span>
+        <h3 class="tut-title">JavaScript Modules — Import and Export</h3>
+        <a class="tut-watch" href="https://youtu.be/Ulp1Kimblg0" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="intermediate">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/131nC-qsjJg?rel=0&modestbranding=1"
+          title="Promises and Async / Await"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 21">#21</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-i">Intermediate</span>
+        <h3 class="tut-title">Promises and Async / Await</h3>
+        <a class="tut-watch" href="https://youtu.be/131nC-qsjJg" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="intermediate">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/CzRQ9mnmh44?rel=0&modestbranding=1"
+          title="Fetch API and Working with REST APIs"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 22">#22</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-i">Intermediate</span>
+        <h3 class="tut-title">Fetch API and Working with REST APIs</h3>
+        <a class="tut-watch" href="https://youtu.be/CzRQ9mnmh44" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="intermediate">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/HFWQdGn5DaU?rel=0&modestbranding=1"
+          title="LocalStorage and SessionStorage"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 23">#23</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-i">Intermediate</span>
+        <h3 class="tut-title">LocalStorage and SessionStorage</h3>
+        <a class="tut-watch" href="https://youtu.be/HFWQdGn5DaU" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="intermediate">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/SBhpLnPuNlI?rel=0&modestbranding=1"
+          title="HTML5 Canvas Basics"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 24">#24</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-i">Intermediate</span>
+        <h3 class="tut-title">HTML5 Canvas Basics</h3>
+        <a class="tut-watch" href="https://youtu.be/SBhpLnPuNlI" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="intermediate">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/lZskxdMpYfE?rel=0&modestbranding=1"
+          title="Project — Build a To-Do App"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 25">#25</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-i">Intermediate</span>
+        <h3 class="tut-title">Project — Build a To-Do App</h3>
+        <a class="tut-watch" href="https://youtu.be/lZskxdMpYfE" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="intermediate">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/_8NbieWg0jQ?rel=0&modestbranding=1"
+          title="Project — Build a Calculator"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 26">#26</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-i">Intermediate</span>
+        <h3 class="tut-title">Project — Build a Calculator</h3>
+        <a class="tut-watch" href="https://youtu.be/_8NbieWg0jQ" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="intermediate">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/xmXsT3zxUJE?rel=0&modestbranding=1"
+          title="Dark Mode and Theme Switching"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 27">#27</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-i">Intermediate</span>
+        <h3 class="tut-title">Dark Mode and Theme Switching</h3>
+        <a class="tut-watch" href="https://youtu.be/xmXsT3zxUJE" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="intermediate">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/TklkNLihQ_A?rel=0&modestbranding=1"
+          title="Responsive Navbar with Hamburger Menu"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 28">#28</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-i">Intermediate</span>
+        <h3 class="tut-title">Responsive Navbar with Hamburger Menu</h3>
+        <a class="tut-watch" href="https://youtu.be/TklkNLihQ_A" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="intermediate">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/A_UZeN3uBBE?rel=0&modestbranding=1"
+          title="Working with JSON Data"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 29">#29</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-i">Intermediate</span>
+        <h3 class="tut-title">Working with JSON Data</h3>
+        <a class="tut-watch" href="https://youtu.be/A_UZeN3uBBE" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="intermediate">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/xDiubRcRKDE?rel=0&modestbranding=1"
+          title="CSS Architecture and BEM Methodology"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 30">#30</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-i">Intermediate</span>
+        <h3 class="tut-title">CSS Architecture and BEM Methodology</h3>
+        <a class="tut-watch" href="https://youtu.be/xDiubRcRKDE" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="intermediate">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/irqbmMNs2Bo?rel=0&modestbranding=1"
+          title="JavaScript Array Methods Masterclass"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 31">#31</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-i">Intermediate</span>
+        <h3 class="tut-title">JavaScript Array Methods Masterclass</h3>
+        <a class="tut-watch" href="https://youtu.be/irqbmMNs2Bo" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="intermediate">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/r6-70Ts2oOI?rel=0&modestbranding=1"
+          title="CSS Pseudo-Classes and Pseudo-Elements"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 32">#32</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-i">Intermediate</span>
+        <h3 class="tut-title">CSS Pseudo-Classes and Pseudo-Elements</h3>
+        <a class="tut-watch" href="https://youtu.be/r6-70Ts2oOI" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="intermediate">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/DZwhJ3sXIB0?rel=0&modestbranding=1"
+          title="Project — Build a Weather App"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 33">#33</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-i">Intermediate</span>
+        <h3 class="tut-title">Project — Build a Weather App</h3>
+        <a class="tut-watch" href="https://youtu.be/DZwhJ3sXIB0" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="intermediate">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/h1mAUcDXCG0?rel=0&modestbranding=1"
+          title="Project — Build a Markdown Preview App"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 34">#34</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-i">Intermediate</span>
+        <h3 class="tut-title">Project — Build a Markdown Preview App</h3>
+        <a class="tut-watch" href="https://youtu.be/h1mAUcDXCG0" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="intermediate">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/mP7-sTp7stk?rel=0&modestbranding=1"
+          title="JavaScript Error Handling and Debugging"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 35">#35</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-i">Intermediate</span>
+        <h3 class="tut-title">JavaScript Error Handling and Debugging</h3>
+        <a class="tut-watch" href="https://youtu.be/mP7-sTp7stk" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="advanced">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/NqGe942J4Y0?rel=0&modestbranding=1"
+          title="Introduction to TypeScript"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 36">#36</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-a">Advanced</span>
+        <h3 class="tut-title">Introduction to TypeScript</h3>
+        <a class="tut-watch" href="https://youtu.be/NqGe942J4Y0" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="advanced">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/YIrXXg9sanA?rel=0&modestbranding=1"
+          title="TypeScript Interfaces and Generics"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 37">#37</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-a">Advanced</span>
+        <h3 class="tut-title">TypeScript Interfaces and Generics</h3>
+        <a class="tut-watch" href="https://youtu.be/YIrXXg9sanA" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="advanced">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/oRz108pc_eE?rel=0&modestbranding=1"
+          title="React — Getting Started with JSX"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 38">#38</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-a">Advanced</span>
+        <h3 class="tut-title">React — Getting Started with JSX</h3>
+        <a class="tut-watch" href="https://youtu.be/oRz108pc_eE" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="advanced">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/BgLYKrjgskU?rel=0&modestbranding=1"
+          title="React Hooks — useState and useEffect"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 39">#39</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-a">Advanced</span>
+        <h3 class="tut-title">React Hooks — useState and useEffect</h3>
+        <a class="tut-watch" href="https://youtu.be/BgLYKrjgskU" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="advanced">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/TtGM9GfBuok?rel=0&modestbranding=1"
+          title="React Context API and Global State"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 40">#40</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-a">Advanced</span>
+        <h3 class="tut-title">React Context API and Global State</h3>
+        <a class="tut-watch" href="https://youtu.be/TtGM9GfBuok" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="advanced">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/KOAmlhDkjBw?rel=0&modestbranding=1"
+          title="Node.js Setup and Core Modules"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 41">#41</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-a">Advanced</span>
+        <h3 class="tut-title">Node.js Setup and Core Modules</h3>
+        <a class="tut-watch" href="https://youtu.be/KOAmlhDkjBw" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="advanced">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/CuWfgiwI73Q?rel=0&modestbranding=1"
+          title="Express.js — Build a REST API"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 42">#42</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-a">Advanced</span>
+        <h3 class="tut-title">Express.js — Build a REST API</h3>
+        <a class="tut-watch" href="https://youtu.be/CuWfgiwI73Q" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="advanced">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/KCfwX98EWIc?rel=0&modestbranding=1"
+          title="MongoDB and Mongoose Fundamentals"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 43">#43</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-a">Advanced</span>
+        <h3 class="tut-title">MongoDB and Mongoose Fundamentals</h3>
+        <a class="tut-watch" href="https://youtu.be/KCfwX98EWIc" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="advanced">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/TBs7HXI76yU?rel=0&modestbranding=1"
+          title="JWT Authentication from Scratch"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 44">#44</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-a">Advanced</span>
+        <h3 class="tut-title">JWT Authentication from Scratch</h3>
+        <a class="tut-watch" href="https://youtu.be/TBs7HXI76yU" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="advanced">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/tQN9Bah32uA?rel=0&modestbranding=1"
+          title="Web Performance Optimization"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 45">#45</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-a">Advanced</span>
+        <h3 class="tut-title">Web Performance Optimization</h3>
+        <a class="tut-watch" href="https://youtu.be/tQN9Bah32uA" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="advanced">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/cKK-Y1-jAHM?rel=0&modestbranding=1"
+          title="Progressive Web Apps (PWA)"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 46">#46</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-a">Advanced</span>
+        <h3 class="tut-title">Progressive Web Apps (PWA)</h3>
+        <a class="tut-watch" href="https://youtu.be/cKK-Y1-jAHM" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="advanced">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/SykxWpFwMGs?rel=0&modestbranding=1"
+          title="Web Accessibility (a11y) Deep Dive"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 47">#47</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-a">Advanced</span>
+        <h3 class="tut-title">Web Accessibility (a11y) Deep Dive</h3>
+        <a class="tut-watch" href="https://youtu.be/SykxWpFwMGs" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="advanced">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/IEhwc2q1zG4?rel=0&modestbranding=1"
+          title="CSS Container Queries and Modern CSS"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 48">#48</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-a">Advanced</span>
+        <h3 class="tut-title">CSS Container Queries and Modern CSS</h3>
+        <a class="tut-watch" href="https://youtu.be/IEhwc2q1zG4" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="advanced">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/AK2xb-N496s?rel=0&modestbranding=1"
+          title="Deploying Full-Stack Apps to Vercel"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 49">#49</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-a">Advanced</span>
+        <h3 class="tut-title">Deploying Full-Stack Apps to Vercel</h3>
+        <a class="tut-watch" href="https://youtu.be/AK2xb-N496s" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    <article class="tut-card" data-level="advanced">
+      <div class="tut-vid">
+        <iframe
+          src="https://www.youtube.com/embed/0HyIda5eub8?rel=0&modestbranding=1"
+          title="Capstone — Build a Full-Stack Web App"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="tut-num" aria-label="Video 50">#50</span>
+      </div>
+      <div class="tut-body">
+        <span class="tut-badge lvl-a">Advanced</span>
+        <h3 class="tut-title">Capstone — Build a Full-Stack Web App</h3>
+        <a class="tut-watch" href="https://youtu.be/0HyIda5eub8" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Watch</a>
+      </div>
+    </article>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="f-brand">
+          <div class="f-logo" aria-hidden="true">
+            <svg fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+            </svg>
+          </div>
+          <span>Veltrix IDE</span>
+        </div>
+        <p class="f-tag">Browser-based IDE for modern web developers. No install. No setup. Just code.</p>
+      </div>
+      <div class="f-col"><h4>Pages</h4><a href="./index.html">Home</a><a href="./tutorials.html">Tutorials</a><a href="./lab.html">Lab</a><a href="./about.html">About</a></div>
+      <div class="f-col"><h4>Support</h4><a href="./contact.html">Contact</a><a href="./privacy.html">Privacy Policy</a></div>
+      <div class="f-col"><h4>Tech</h4><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener">HTML5</a><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener">CSS3</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener">Vanilla JS</a></div>
+    </div>
+    <div class="footer-bottom">
+      <p class="f-copy">&copy; 2026 Veltrix IDE &middot; Mohammad Khan</p>
+      <div class="f-legal"><a href="./privacy.html">Privacy Policy</a><a href="./contact.html">Contact</a></div>
+    </div>
+  </div>
+</footer>
+<div id="modal-login" class="modal" role="dialog" aria-modal="true" aria-labelledby="lh">
+  <div class="modal-box">
+    <div class="modal-hd"><h2 id="lh">Log In</h2><button class="modal-x" aria-label="Close">&times;</button></div>
+    <form id="form-login" class="modal-form" novalidate>
+      <label class="f-lbl">Username<input type="text" name="username" class="f-inp" placeholder="your_username" autocomplete="username" required></label>
+      <label class="f-lbl">Password<input type="password" name="password" class="f-inp" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" autocomplete="current-password" required></label>
+      <div id="err-login" class="f-err" style="display:none"></div>
+      <button type="submit" class="btn btn-primary btn-full">Log In</button>
+      <p class="modal-ft">No account? <button type="button" class="link-btn" data-modal="modal-signup">Sign up &rarr;</button></p>
+    </form>
+  </div>
+</div>
+<div id="modal-signup" class="modal" role="dialog" aria-modal="true" aria-labelledby="sh">
+  <div class="modal-box">
+    <div class="modal-hd"><h2 id="sh">Create Account</h2><button class="modal-x" aria-label="Close">&times;</button></div>
+    <form id="form-signup" class="modal-form" novalidate>
+      <label class="f-lbl">Full Name<input type="text" name="fullname" class="f-inp" placeholder="Your Name" autocomplete="name" required></label>
+      <label class="f-lbl">Username<input type="text" name="username" class="f-inp" placeholder="choose_username" autocomplete="username" required></label>
+      <label class="f-lbl">Email<input type="email" name="email" class="f-inp" placeholder="you@example.com" autocomplete="email" required></label>
+      <label class="f-lbl">Password <small style="color:var(--t3);font-weight:400">(min 6)</small><input type="password" name="password" class="f-inp" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" autocomplete="new-password" required></label>
+      <div id="err-signup" class="f-err" style="display:none"></div>
+      <button type="submit" class="btn btn-primary btn-full">Create Account</button>
+      <p class="modal-ft">Have account? <button type="button" class="link-btn" data-modal="modal-login">Log in &rarr;</button></p>
+    </form>
+  </div>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="./script.js"></script>
+<script>
+(function() {
+  var pills   = document.querySelectorAll('.tut-pill');
+  var cards   = document.querySelectorAll('.tut-card');
+  var counter = document.getElementById('tut-count');
+  function filter(f) {
+    var n = 0;
+    cards.forEach(function(c) {
+      var show = f === 'all' || c.dataset.level === f;
+      c.hidden = !show;
+      if (show) n++;
+    });
+    if (counter) counter.textContent = n + ' lesson' + (n !== 1 ? 's' : '');
+  }
+  pills.forEach(function(p) {
+    p.addEventListener('click', function() {
+      pills.forEach(function(x) { x.classList.remove('active'); });
+      p.classList.add('active');
+      filter(p.dataset.filter);
+    });
+  });
+})();
+</script>
+</body>
+</html>

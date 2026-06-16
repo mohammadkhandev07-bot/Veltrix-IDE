@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="aquatic" class="is-lab">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab — Veltrix IDE</title>
+  <meta name="description" content="Veltrix IDE Lab — professional browser-based code editor with live preview. Write HTML, CSS and JavaScript instantly.">
+  <meta name="theme-color" content="#070e1d">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <script>(function(){var t=localStorage.getItem('veltrix_theme')||'aquatic';document.documentElement.setAttribute('data-theme',t);})();</script>
+  <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+</script>
+</head>
+<body class="lab-pg">
+<header>
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-wrap">
+      <a href="./index.html" class="nav-logo" aria-label="Veltrix IDE home">
+        <div class="logo-mark" aria-hidden="true">
+          <svg fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+          </svg>
+        </div>
+        <span>Veltrix IDE</span>
+      </a>
+      <ul class="nav-links" role="menubar">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./tutorials.html">Tutorials</a></li>
+        <li><a href="./lab.html"  class="active">Lab</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <div id="nav-auth" class="nav-auth">
+          <button class="btn btn-ghost btn-sm" data-modal="modal-login">Log in</button>
+          <button class="btn btn-primary btn-sm" data-modal="modal-signup">Sign up</button>
+        </div>
+        <div id="nav-user" class="nav-user">
+          <div id="nav-avatar" class="nav-avatar"></div>
+          <span id="nav-uname" class="nav-uname"></span>
+          <button id="logout-btn" class="btn btn-ghost btn-sm">Logout</button>
+        </div>
+        <div class="theme-sel">
+          <button class="theme-btn" id="theme-btn" aria-haspopup="listbox" aria-label="Change theme">
+            <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+            <span class="t-label">Theme</span>
+          </button>
+          <div class="theme-dd" id="theme-dd" role="listbox"></div>
+        </div>
+        <button class="nav-ham" id="nav-ham" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-drawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <nav class="nav-drawer" id="nav-drawer" aria-label="Mobile navigation" aria-hidden="true">
+    <a href="./index.html">Home</a>
+    <a href="./tutorials.html">Tutorials</a>
+    <a href="./lab.html"  class="active">Lab</a>
+    <a href="./about.html">About</a>
+    <a href="./contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- ============================================================
+     LAB GATE — shown when NOT logged in
+     ============================================================ -->
+<div id="lab-gate" class="lab-gate" aria-label="Authentication required">
+  <div class="gate-ring" aria-hidden="true">&#128274;</div>
+  <h2>Sign in to use the Lab</h2>
+  <p>Create a free account to access the full IDE — file explorer, live editor, live preview and localStorage persistence.</p>
+  <div class="gate-btns">
+    <button class="btn btn-primary btn-lg" data-modal="modal-signup">Create Free Account</button>
+    <button class="btn btn-ghost   btn-lg" data-modal="modal-login">Log In</button>
+  </div>
+</div>
+
+<!-- ============================================================
+     IDE WRAP — shown when logged in
+     ============================================================ -->
+<div id="ide-wrap" class="ide-wrap" aria-label="Code editor workspace">
+
+  <!-- ── IDE BODY
+       Mobile:  flex-direction: column  (Explorer → Editor → Preview stacked)
+       Desktop: flex-direction: row     (3 side-by-side panels at ≥900px)
+       ── -->
+  <div class="ide-body">
+
+    <!-- ── PANEL 1: File Explorer Sidebar ── -->
+    <aside class="ide-side" aria-label="File explorer">
+
+      <div class="sb-bar">
+        <span class="sb-lbl">Explorer</span>
+        <div class="sb-acts">
+          <!-- New File -->
+          <button id="btn-new-file" class="sb-icon" title="New File (Ctrl+N)" aria-label="New file">
+            <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="12" y1="18" x2="12" y2="12"/>
+              <line x1="9"  y1="15" x2="15" y2="15"/>
+            </svg>
+          </button>
+          <!-- New Folder -->
+          <button id="btn-new-folder" class="sb-icon" title="New Folder" aria-label="New folder">
+            <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/>
+              <line x1="12" y1="11" x2="12" y2="17"/>
+              <line x1="9"  y1="14" x2="15" y2="14"/>
+            </svg>
+          </button>
+          <!-- Upload File -->
+          <button id="btn-upload" class="sb-icon" title="Upload File" aria-label="Upload file">
+            <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+              <polyline points="17 8 12 3 7 8"/>
+              <line x1="12" y1="3" x2="12" y2="15"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- File tree (populated by script.js) -->
+      <div id="file-tree" class="ftree" role="tree" aria-label="Project files"></div>
+      <input type="file" id="upload-input" multiple aria-hidden="true" tabindex="-1">
+
+    </aside><!-- /ide-side -->
+
+    <!-- ── PANEL 2: Code Editor ── -->
+    <div class="ide-mid" role="main" aria-label="Code editor">
+
+      <!-- Tab bar -->
+      <div id="ide-tabs" class="ide-tabs" role="tablist" aria-label="Open files"></div>
+
+      <!-- Code textarea -->
+      <textarea
+        id="ide-editor"
+        spellcheck="false"
+        autocomplete="off"
+        autocorrect="off"
+        autocapitalize="off"
+        aria-label="Source code editor"
+        aria-multiline="true"
+        placeholder="Select a file to start editing&hellip;"></textarea>
+
+      <!-- Image preview (shown for image files) -->
+      <div id="img-prev" class="img-prev" aria-label="Image preview">
+        <img id="img-prev-el" src="" alt="Uploaded image preview">
+      </div>
+
+      <!-- Status bar -->
+      <div class="ide-status" role="status" aria-label="Editor status">
+        <span>Veltrix IDE</span>
+        <span class="st-sep" aria-hidden="true"></span>
+        <span id="status-lang">&#8212;</span>
+        <span class="st-sep" aria-hidden="true"></span>
+        <span id="status-file">&#8212;</span>
+      </div>
+
+    </div><!-- /ide-mid -->
+
+    <!-- ── PANEL 3: Live Preview ── -->
+    <div class="ide-prev" aria-label="Live preview">
+
+      <div class="prev-head">
+        <span class="prev-title">Live Preview</span>
+        <div class="prev-btns">
+          <button id="btn-refresh" class="prev-btn" aria-label="Refresh preview">
+            <svg fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <polyline points="23 4 23 10 17 10"/>
+              <path d="M20.49 15a9 9 0 11-2.12-9.36L23 10"/>
+            </svg>
+            Refresh
+          </button>
+          <button id="btn-fullscreen" class="prev-fs" aria-label="Fullscreen preview">
+            <svg fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+              <polyline points="15 3 21 3 21 9"/>
+              <line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <iframe
+        id="preview-frame"
+        title="Live preview"
+        sandbox="allow-scripts allow-modals allow-forms allow-same-origin"
+        aria-label="Rendered project preview"></iframe>
+
+    </div><!-- /ide-prev -->
+
+  </div><!-- /ide-body -->
+</div><!-- /ide-wrap -->
+
+<!-- ============================================================
+     FULLSCREEN PREVIEW MODAL
+     ============================================================ -->
+<div id="fs-modal" class="fs-modal" role="dialog" aria-modal="true" aria-label="Fullscreen preview">
+  <div class="fs-bar">
+    <span class="fs-bar-title">Live Preview — Fullscreen</span>
+    <div class="fs-bar-btns">
+      <button id="fs-refresh" class="fs-btn" aria-label="Refresh fullscreen preview">
+        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+          <polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 11-2.12-9.36L23 10"/>
+        </svg>
+        Refresh
+      </button>
+      <button id="fs-close" class="fs-btn close" aria-label="Close fullscreen preview (Esc)">
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+        Close (Esc)
+      </button>
+    </div>
+  </div>
+  <iframe id="fs-frame" title="Fullscreen preview" sandbox="allow-scripts allow-modals allow-forms allow-same-origin"></iframe>
+</div>
+
+<div id="modal-login" class="modal" role="dialog" aria-modal="true" aria-labelledby="lh">
+  <div class="modal-box">
+    <div class="modal-hd"><h2 id="lh">Log In</h2><button class="modal-x" aria-label="Close">&times;</button></div>
+    <form id="form-login" class="modal-form" novalidate>
+      <label class="f-lbl">Username<input type="text" name="username" class="f-inp" placeholder="your_username" autocomplete="username" required></label>
+      <label class="f-lbl">Password<input type="password" name="password" class="f-inp" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" autocomplete="current-password" required></label>
+      <div id="err-login" class="f-err" style="display:none"></div>
+      <button type="submit" class="btn btn-primary btn-full">Log In</button>
+      <p class="modal-ft">No account? <button type="button" class="link-btn" data-modal="modal-signup">Sign up &rarr;</button></p>
+    </form>
+  </div>
+</div>
+<div id="modal-signup" class="modal" role="dialog" aria-modal="true" aria-labelledby="sh">
+  <div class="modal-box">
+    <div class="modal-hd"><h2 id="sh">Create Account</h2><button class="modal-x" aria-label="Close">&times;</button></div>
+    <form id="form-signup" class="modal-form" novalidate>
+      <label class="f-lbl">Full Name<input type="text" name="fullname" class="f-inp" placeholder="Your Name" autocomplete="name" required></label>
+      <label class="f-lbl">Username<input type="text" name="username" class="f-inp" placeholder="choose_username" autocomplete="username" required></label>
+      <label class="f-lbl">Email<input type="email" name="email" class="f-inp" placeholder="you@example.com" autocomplete="email" required></label>
+      <label class="f-lbl">Password <small style="color:var(--t3);font-weight:400">(min 6)</small><input type="password" name="password" class="f-inp" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" autocomplete="new-password" required></label>
+      <div id="err-signup" class="f-err" style="display:none"></div>
+      <button type="submit" class="btn btn-primary btn-full">Create Account</button>
+      <p class="modal-ft">Have account? <button type="button" class="link-btn" data-modal="modal-login">Log in &rarr;</button></p>
+    </form>
+  </div>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="./script.js"></script>
+</body>
+</html>

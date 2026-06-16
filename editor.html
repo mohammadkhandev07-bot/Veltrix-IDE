@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Editor — Veltrix IDE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./editor.css">
+</head>
+<body>
+
+<div class="ide">
+
+  <div class="topbar">
+    <div class="topbar-left">
+      <a href="./lab.html" class="back-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        Projects
+      </a>
+      <div class="topbar-sep"></div>
+      <span class="breadcrumb">
+        <span id="bcFolder" class="bc-folder"></span>
+        <span class="bc-slash">/</span>
+        <span id="bcProject" class="bc-project"></span>
+      </span>
+    </div>
+    <div class="topbar-right">
+      <span id="saveStatus" class="save-status">All saved</span>
+      <button id="btnSave" class="btn-save">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+        Save <kbd>Ctrl+S</kbd>
+      </button>
+    </div>
+  </div>
+
+  <div class="ide-body">
+
+    <aside class="ide-sidebar">
+      <div class="ide-sidebar-label">EXPLORER</div>
+      <div id="ideTree" class="ide-tree"></div>
+    </aside>
+
+    <div class="code-panel">
+      <div class="file-tabs" role="tablist">
+        <button class="file-tab active" data-file="index.html" role="tab" aria-selected="true">
+          <span class="fdot fdot-html"></span>index.html
+        </button>
+        <button class="file-tab" data-file="style.css" role="tab" aria-selected="false">
+          <span class="fdot fdot-css"></span>style.css
+        </button>
+        <button class="file-tab" data-file="script.js" role="tab" aria-selected="false">
+          <span class="fdot fdot-js"></span>script.js
+        </button>
+      </div>
+      <textarea id="codeArea" spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off" aria-label="Code editor"></textarea>
+      <div class="statusbar">
+        <span>Veltrix IDE</span>
+        <span class="sb-sep"></span>
+        <span id="sbLang">HTML</span>
+        <span class="sb-sep"></span>
+        <span>UTF-8</span>
+        <span class="sb-sep"></span>
+        <span id="sbLines">1 line</span>
+      </div>
+    </div>
+
+    <div class="preview-panel">
+      <div class="preview-bar">
+        <span>LIVE PREVIEW</span>
+        <div class="preview-bar-actions">
+          <button id="btnRefresh" class="btn-refresh" title="Refresh preview">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 11-2.12-9.36L23 10"/></svg>
+            Refresh
+          </button>
+          <button id="btnFullscreen" class="btn-fullscreen" title="Open in fullscreen">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+              <polyline points="15 3 21 3 21 9"/>
+              <line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <iframe id="previewFrame" title="Live preview" sandbox="allow-scripts allow-modals allow-forms"></iframe>
+    </div>
+
+  </div>
+</div>
+
+<!-- FULLSCREEN MODAL -->
+<div id="fsModal" class="fs-modal" role="dialog" aria-modal="true" aria-label="Fullscreen preview">
+  <div class="fs-bar">
+    <span class="fs-bar-title" id="fsTitle">Preview</span>
+    <div class="fs-bar-actions">
+      <button id="fsRefresh" class="fs-btn" title="Refresh">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 11-2.12-9.36L23 10"/></svg>
+        Refresh
+      </button>
+      <button id="fsClose" class="fs-btn fs-close-btn" title="Close fullscreen (Esc)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        Close
+      </button>
+    </div>
+  </div>
+  <iframe id="fsFrame" title="Fullscreen preview" sandbox="allow-scripts allow-modals allow-forms"></iframe>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script src="./editor.js"></script>
+</body>
+</html>

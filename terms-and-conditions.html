@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="aquatic">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms and Conditions — Veltrix IDE</title>
+  <meta name="description" content="Read the Terms and Conditions for using Veltrix IDE — a free browser-based code editor and web development learning platform.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#070e1d">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Terms and Conditions — Veltrix IDE">
+  <meta property="og:description" content="Read the Terms and Conditions for using Veltrix IDE.">
+  <meta property="og:url"         content="https://veltrix-ide.vercel.app/terms-and-conditions.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- Theme init (prevents flash) -->
+  <script>(function(){var t=localStorage.getItem('veltrix_theme')||'aquatic';document.documentElement.setAttribute('data-theme',t);})();</script>
+
+  <!-- ============================================================
+       <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+</script>
+  ============================================================ -->
+
+  <style>
+    /* ── Terms page specific styles ── */
+    .terms-hero {
+      padding: 56px 0 40px;
+      border-bottom: 1px solid var(--gb);
+      margin-bottom: 0;
+    }
+    .terms-hero-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--ac);
+      font-family: 'JetBrains Mono', monospace;
+      margin-bottom: 16px;
+    }
+    .terms-hero-chip::before { content: '//'; color: var(--t3); margin-right: 2px; }
+    .terms-hero h1 {
+      font-size: clamp(28px, 5vw, 48px);
+      font-weight: 800;
+      letter-spacing: -.04em;
+      color: var(--t1);
+      margin-bottom: 12px;
+      line-height: 1.1;
+    }
+    .terms-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 18px;
+    }
+    .terms-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 13px;
+      color: var(--t3);
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .terms-meta-item svg { width: 14px; height: 14px; color: var(--ac); flex-shrink: 0; }
+
+    /* Layout */
+    .terms-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      padding: 40px 0 80px;
+      align-items: start;
+    }
+    @media (min-width: 900px) {
+      .terms-layout {
+        grid-template-columns: 220px 1fr;
+        gap: 48px;
+        padding: 48px 0 80px;
+      }
+    }
+
+    /* Sticky Table of Contents */
+    .terms-toc {
+      background: var(--glass);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--gb);
+      border-radius: var(--r);
+      padding: 20px;
+      position: sticky;
+      top: 84px;
+    }
+    .toc-heading {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--t3);
+      font-family: 'JetBrains Mono', monospace;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--gb);
+    }
+    .toc-list { display: flex; flex-direction: column; gap: 2px; }
+    .toc-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      height: 34px;
+      padding: 0 10px;
+      border-radius: var(--r-sm);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--t2);
+      transition: color .12s, background .12s;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .toc-link::before {
+      content: '';
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: var(--t3);
+      flex-shrink: 0;
+      transition: background .12s;
+    }
+    .toc-link:hover { color: var(--t1); background: rgba(255,255,255,.06); }
+    .toc-link:hover::before { background: var(--ac); }
+    .toc-link.active { color: var(--ac); font-weight: 600; }
+    .toc-link.active::before { background: var(--ac); }
+
+    /* Prose content */
+    .terms-content { min-width: 0; }
+
+    .terms-section {
+      margin-bottom: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--gb);
+      scroll-margin-top: 84px;
+    }
+    .terms-section:last-of-type {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .ts-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px; height: 28px;
+      background: var(--grad);
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--grad-fg);
+      font-family: 'JetBrains Mono', monospace;
+      flex-shrink: 0;
+      margin-bottom: 14px;
+    }
+    .ts-title {
+      font-size: clamp(18px, 2.8vw, 24px);
+      font-weight: 700;
+      color: var(--t1);
+      letter-spacing: -.025em;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .ts-body p {
+      font-size: 15px;
+      color: var(--t2);
+      line-height: 1.78;
+      margin-bottom: 14px;
+    }
+    .ts-body p:last-child { margin-bottom: 0; }
+    .ts-body ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin: 14px 0;
+    }
+    .ts-body ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 15px;
+      color: var(--t2);
+      line-height: 1.65;
+    }
+    .ts-body ul li::before {
+      content: '→';
+      color: var(--ac);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .ts-body strong { color: var(--t1); font-weight: 600; }
+    .ts-body a { color: var(--ac); text-decoration: underline; text-underline-offset: 3px; }
+    .ts-body a:hover { opacity: .8; }
+    .ts-body code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      background: var(--sub);
+      border: 1px solid var(--gb);
+      border-radius: 5px;
+      padding: 2px 7px;
+      color: var(--ac);
+    }
+
+    /* Notice box */
+    .terms-notice {
+      background: var(--glass);
+      border: 1px solid var(--gb);
+      border-left: 3px solid var(--ac);
+      border-radius: var(--r);
+      padding: 18px 20px;
+      margin-bottom: 40px;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .terms-notice p {
+      font-size: 14px;
+      color: var(--t2);
+      line-height: 1.7;
+    }
+    .terms-notice strong { color: var(--t1); }
+
+    /* Contact card inside terms */
+    .terms-contact-card {
+      background: var(--glass);
+      border: 1px solid var(--gb);
+      border-radius: var(--r);
+      padding: 28px;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 20px;
+    }
+    .terms-contact-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--t1);
+    }
+    .terms-contact-card p {
+      font-size: 14px;
+      color: var(--t2);
+      line-height: 1.65;
+    }
+    .terms-contact-card a.btn { align-self: flex-start; }
+
+    /* Highlight box */
+    .ts-highlight {
+      background: var(--sub);
+      border: 1px solid var(--gb);
+      border-radius: var(--r);
+      padding: 16px 18px;
+      margin: 16px 0;
+    }
+    .ts-highlight p {
+      font-size: 14px !important;
+      color: var(--t2) !important;
+      margin-bottom: 0 !important;
+    }
+    .ts-highlight strong { color: var(--ac) !important; }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════
+     NAVBAR
+══════════════════════════════════════════════════════════ -->
+<header>
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-wrap">
+
+      <!-- Logo -->
+      <a href="./index.html" class="nav-logo" aria-label="Veltrix IDE home">
+        <div class="logo-mark" aria-hidden="true">
+          <svg fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+          </svg>
+        </div>
+        <span>Veltrix IDE</span>
+      </a>
+
+      <!-- Desktop links -->
+      <ul class="nav-links" role="menubar">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./tutorials.html">Tutorials</a></li>
+        <li><a href="./lab.html">Lab</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./terms-and-conditions.html" class="active">Terms</a></li>
+      </ul>
+
+      <!-- Right side -->
+      <div class="nav-right">
+        <div id="nav-auth" class="nav-auth">
+          <button class="btn btn-ghost btn-sm" data-modal="modal-login">Log in</button>
+          <button class="btn btn-primary btn-sm" data-modal="modal-signup">Sign up</button>
+        </div>
+        <div id="nav-user" class="nav-user">
+          <div id="nav-avatar" class="nav-avatar"></div>
+          <span id="nav-uname" class="nav-uname"></span>
+          <button id="logout-btn" class="btn btn-ghost btn-sm">Logout</button>
+        </div>
+        <div class="theme-sel">
+          <button class="theme-btn" id="theme-btn" aria-haspopup="listbox" aria-label="Change theme">
+            <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"/>
+              <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+            <span class="t-label">Theme</span>
+          </button>
+          <div class="theme-dd" id="theme-dd" role="listbox"></div>
+        </div>
+        <button class="nav-ham" id="nav-ham" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-drawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Mobile drawer -->
+  <nav class="nav-drawer" id="nav-drawer" aria-label="Mobile navigation" aria-hidden="true">
+    <a href="./index.html">Home</a>
+    <a href="./tutorials.html">Tutorials</a>
+    <a href="./lab.html">Lab</a>
+    <a href="./about.html">About</a>
+    <a href="./contact.html">Contact</a>
+    <a href="./terms-and-conditions.html" class="active">Terms</a>
+  </nav>
+</header>
+
+<!-- ══════════════════════════════════════════════════════
+     MAIN
+══════════════════════════════════════════════════════════ -->
+<main>
+  <div class="container">
+
+    <!-- Page Hero -->
+    <div class="terms-hero">
+      <div class="terms-hero-chip">Legal</div>
+      <h1>Terms and Conditions</h1>
+      <p style="font-size:16px;color:var(--t2);line-height:1.65;max-width:620px;">
+        Please read these Terms and Conditions carefully before using Veltrix IDE.
+        By accessing or using this platform, you agree to be bound by the terms below.
+      </p>
+      <div class="terms-meta">
+        <span class="terms-meta-item">
+          <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Effective Date: 1 January 2026
+        </span>
+        <span class="terms-meta-item">
+          <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Last Updated: 1 June 2026
+        </span>
+        <span class="terms-meta-item">
+          <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Jurisdiction: England &amp; Wales
+        </span>
+      </div>
+    </div>
+
+    <!-- Two-column layout: TOC + Content -->
+    <div class="terms-layout">
+
+      <!-- ── Sticky Table of Contents (desktop) ── -->
+      <aside class="terms-toc" aria-label="Table of contents">
+        <div class="toc-heading">Contents</div>
+        <nav class="toc-list">
+          <a class="toc-link" href="#s1">1. Introduction</a>
+          <a class="toc-link" href="#s2">2. Acceptance of Terms</a>
+          <a class="toc-link" href="#s3">3. Description of Service</a>
+          <a class="toc-link" href="#s4">4. Intellectual Property</a>
+          <a class="toc-link" href="#s5">5. User Obligations</a>
+          <a class="toc-link" href="#s6">6. Account &amp; Data</a>
+          <a class="toc-link" href="#s7">7. Third-Party Content</a>
+          <a class="toc-link" href="#s8">8. Disclaimer of Warranties</a>
+          <a class="toc-link" href="#s9">9. Limitation of Liability</a>
+          <a class="toc-link" href="#s10">10. Indemnification</a>
+          <a class="toc-link" href="#s11">11. Privacy &amp; Cookies</a>
+          <a class="toc-link" href="#s12">12. Changes to Terms</a>
+          <a class="toc-link" href="#s13">13. Termination</a>
+          <a class="toc-link" href="#s14">14. Governing Law</a>
+          <a class="toc-link" href="#s15">15. Contact Us</a>
+        </nav>
+      </aside>
+
+      <!-- ── Main Content ── -->
+      <article class="terms-content" itemscope itemtype="https://schema.org/WebPage">
+
+        <!-- Important notice -->
+        <div class="terms-notice" role="note">
+          <p>
+            <strong>Important:</strong> These Terms constitute a legally binding agreement between you (&ldquo;User&rdquo;, &ldquo;you&rdquo;, &ldquo;your&rdquo;)
+            and Veltrix IDE (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;). If you do not agree with any part of these Terms,
+            you must not use this platform. Continued use after any update constitutes acceptance of the revised Terms.
+          </p>
+        </div>
+
+        <!-- ── Section 1 ── -->
+        <section class="terms-section" id="s1" aria-labelledby="s1-h">
+          <div class="ts-num" aria-hidden="true">01</div>
+          <h2 class="ts-title" id="s1-h">Introduction</h2>
+          <div class="ts-body">
+            <p>
+              Welcome to <strong>Veltrix IDE</strong> (&ldquo;the Platform&rdquo;), a free, browser-based integrated development environment
+              operated by Mohammad Khan (&ldquo;the Operator&rdquo;). Veltrix IDE provides users with a professional code editor,
+              live HTML/CSS/JavaScript preview, a file explorer, and a curated library of web development tutorials — all
+              accessible directly in any modern web browser, with no installation required.
+            </p>
+            <p>
+              These Terms and Conditions (&ldquo;Terms&rdquo;) govern your access to and use of the Veltrix IDE website located at
+              <code>https://veltrix-ide.vercel.app</code> and any sub-pages, features, or services offered therein.
+              By accessing the Platform, you confirm that you have read, understood, and agree to be bound by these Terms
+              and our <a href="./privacy.html">Privacy Policy</a>, which is incorporated herein by reference.
+            </p>
+            <p>
+              Veltrix IDE is intended for individuals aged <strong>13 years or older</strong>. If you are under the age of 13,
+              or under the age of legal majority in your jurisdiction, you may not use this Platform.
+            </p>
+          </div>
+        </section>
+
+        <!-- ── Section 2 ── -->
+        <section class="terms-section" id="s2" aria-labelledby="s2-h">
+          <div class="ts-num" aria-hidden="true">02</div>
+          <h2 class="ts-title" id="s2-h">Acceptance of Terms</h2>
+          <div class="ts-body">
+            <p>
+              By registering for an account, browsing the Platform, using the Lab IDE, watching tutorials, or otherwise
+              accessing any part of Veltrix IDE, you unconditionally agree to these Terms. Your agreement is effective
+              as of the date you first access or use the Platform.
+            </p>
+            <p>
+              These Terms apply to:
+            </p>
+            <ul>
+              <li>All visitors who access the Platform without registering an account.</li>
+              <li>All registered users who create and manage an account on the Platform.</li>
+              <li>Any individual who reads, watches, or otherwise consumes content on the Platform.</li>
+              <li>Any person using the Lab IDE to write or execute code.</li>
+            </ul>
+            <p>
+              We reserve the right to modify these Terms at any time. Changes will be published on this page with an updated
+              &ldquo;Last Updated&rdquo; date. It is your responsibility to review these Terms periodically.
+            </p>
+          </div>
+        </section>
+
+        <!-- ── Section 3 ── -->
+        <section class="terms-section" id="s3" aria-labelledby="s3-h">
+          <div class="ts-num" aria-hidden="true">03</div>
+          <h2 class="ts-title" id="s3-h">Description of Service</h2>
+          <div class="ts-body">
+            <p>
+              Veltrix IDE offers the following core services free of charge:
+            </p>
+            <ul>
+              <li><strong>Lab IDE:</strong> A browser-based code editor supporting HTML, CSS, and JavaScript with live preview rendered in an isolated sandbox iframe.</li>
+              <li><strong>File Explorer:</strong> A virtual project file system stored in your browser&apos;s <code>localStorage</code>, supporting file creation, renaming, duplication, deletion, and image upload.</li>
+              <li><strong>Tutorial Library:</strong> A curated collection of 50 structured video tutorials covering Beginner, Intermediate, and Advanced web development topics via embedded YouTube videos.</li>
+              <li><strong>Theme System:</strong> Four visual themes (Aquatic, Dark, Light, Neon) persisted to <code>localStorage</code>.</li>
+              <li><strong>User Authentication:</strong> A client-side account system that stores credentials in <code>localStorage</code> — no data is transmitted to external servers.</li>
+            </ul>
+            <p>
+              We reserve the right to modify, suspend, or discontinue any feature or the entire Platform at any time,
+              with or without prior notice, and without liability to you.
+            </p>
+          </div>
+        </section>
+
+        <!-- ── Section 4 ── -->
+        <section class="terms-section" id="s4" aria-labelledby="s4-h">
+          <div class="ts-num" aria-hidden="true">04</div>
+          <h2 class="ts-title" id="s4-h">Intellectual Property Rights</h2>
+          <div class="ts-body">
+            <p>
+              <strong>Platform Content:</strong> All content on Veltrix IDE that is not user-generated — including but not limited to
+              the source code, design system, CSS styles, JavaScript logic, written tutorials, page layouts, icons, logos, and branding
+              — is the exclusive intellectual property of Mohammad Khan and is protected by applicable copyright, trademark, and
+              intellectual property laws.
+            </p>
+            <p>
+              You are granted a limited, non-exclusive, non-transferable, revocable licence to access and use the Platform
+              solely for personal, non-commercial educational purposes. This licence does not permit you to:
+            </p>
+            <ul>
+              <li>Copy, reproduce, distribute, or republish the Platform&apos;s source code or design in any form.</li>
+              <li>Sell, sublicense, or commercially exploit any part of the Platform.</li>
+              <li>Remove or alter any copyright, trademark, or proprietary notices.</li>
+              <li>Reverse-engineer, decompile, or disassemble any part of the Platform.</li>
+              <li>Create derivative works based on the Platform without express written permission.</li>
+            </ul>
+            <p>
+              <strong>Your Code:</strong> Code you write in the Lab IDE belongs to you. Veltrix IDE makes no claim to ownership of
+              any projects you create. Since all data is stored locally in your browser&apos;s <code>localStorage</code>, we do not
+              have access to, store, or process your code on our servers.
+            </p>
+            <p>
+              <strong>Third-Party Content:</strong> Tutorial videos are embedded from YouTube and remain the property of their
+              respective creators. We do not claim ownership of any third-party content linked to or displayed on the Platform.
+            </p>
+          </div>
+        </section>
+
+        <!-- ── Section 5 ── -->
+        <section class="terms-section" id="s5" aria-labelledby="s5-h">
+          <div class="ts-num" aria-hidden="true">05</div>
+          <h2 class="ts-title" id="s5-h">User Obligations</h2>
+          <div class="ts-body">
+            <p>
+              By using Veltrix IDE, you agree to use the Platform responsibly and lawfully. You must not use the Platform to:
+            </p>
+            <ul>
+              <li>Violate any applicable local, national, or international law or regulation.</li>
+              <li>Write, store, or distribute malicious code, malware, viruses, or any software designed to disrupt or harm systems.</li>
+              <li>Attempt to circumvent, disable, or interfere with the Platform&apos;s security features or authentication mechanisms.</li>
+              <li>Engage in any activity that imposes an unreasonable or disproportionate load on the Platform&apos;s infrastructure.</li>
+              <li>Scrape, harvest, or otherwise extract data from the Platform using automated tools.</li>
+              <li>Misrepresent your identity or impersonate another person or entity when registering an account.</li>
+              <li>Use the Platform for any commercial purpose without our prior written consent.</li>
+              <li>Post, transmit, or distribute content that is unlawful, defamatory, obscene, threatening, or infringes the rights of any third party.</li>
+            </ul>
+            <p>
+              We reserve the right to investigate any suspected violation of these obligations and to take appropriate action,
+              including suspending or terminating your access to the Platform.
+            </p>
+          </div>
+        </section>
+
+        <!-- ── Section 6 ── -->
+        <section class="terms-section" id="s6" aria-labelledby="s6-h">
+          <div class="ts-num" aria-hidden="true">06</div>
+          <h2 class="ts-title" id="s6-h">Account &amp; Data Storage</h2>
+          <div class="ts-body">
+            <p>
+              Veltrix IDE uses a <strong>client-side only</strong> authentication model. When you register an account, your
+              username, display name, email address, and hashed password are stored exclusively in your browser&apos;s
+              <code>localStorage</code>. No data is transmitted to, stored on, or processed by any external server operated by us.
+            </p>
+            <div class="ts-highlight">
+              <p><strong>Important:</strong> Because all data is stored locally, clearing your browser cache, using a different browser, or switching devices will result in permanent loss of your account and project data. We strongly recommend exporting or backing up your code regularly.</p>
+            </div>
+            <p>
+              You are solely responsible for:
+            </p>
+            <ul>
+              <li>Maintaining the confidentiality of your account credentials.</li>
+              <li>All activity that occurs under your account.</li>
+              <li>Backing up your project files to prevent data loss.</li>
+              <li>Ensuring your account details are accurate and up to date.</li>
+            </ul>
+            <p>
+              You may delete your account data at any time by clearing your browser&apos;s <code>localStorage</code> for this site.
+            </p>
+          </div>
+        </section>
+
+        <!-- ── Section 7 ── -->
+        <section class="terms-section" id="s7" aria-labelledby="s7-h">
+          <div class="ts-num" aria-hidden="true">07</div>
+          <h2 class="ts-title" id="s7-h">Third-Party Content &amp; Links</h2>
+          <div class="ts-body">
+            <p>
+              The Platform embeds video content from <strong>YouTube</strong> (owned by Google LLC). By watching embedded
+              tutorials, you are subject to YouTube&apos;s <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener noreferrer">Terms of Service</a>
+              and Google&apos;s <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
+            </p>
+            <p>
+              The Platform may also contain links to external websites or resources. These links are provided for your
+              convenience only. We have no control over the content of those sites or resources, and accept no responsibility
+              for them or for any loss or damage that may arise from your use of them.
+            </p>
+            <p>
+              The Platform is hosted on <strong>Vercel</strong> (Vercel Inc.). By using Veltrix IDE, you acknowledge that Vercel&apos;s
+              infrastructure handles the delivery of static files. Vercel&apos;s <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+              and <a href="https://vercel.com/legal/terms" target="_blank" rel="noopener noreferrer">Terms of Service</a> also apply.
+            </p>
+            <p>
+              This Platform may display advertisements served by <strong>Google AdSense</strong> (Google LLC). Google uses cookies
+              to serve ads based on prior visits to this and other websites. You can opt out of personalised advertising by
+              visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">Google&apos;s Ad Settings</a>.
+              Google&apos;s use of advertising cookies is governed by its
+              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
+            </p>
+          </div>
+        </section>
+
+        <!-- ── Section 8 ── -->
+        <section class="terms-section" id="s8" aria-labelledby="s8-h">
+          <div class="ts-num" aria-hidden="true">08</div>
+          <h2 class="ts-title" id="s8-h">Disclaimer of Warranties</h2>
+          <div class="ts-body">
+            <p>
+              Veltrix IDE is provided on an <strong>&ldquo;as is&rdquo; and &ldquo;as available&rdquo;</strong> basis, without any warranties
+              of any kind, either express or implied. To the fullest extent permitted by applicable law, we expressly disclaim all
+              warranties, including but not limited to:
+            </p>
+            <ul>
+              <li>Implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</li>
+              <li>Any warranty that the Platform will be uninterrupted, timely, secure, or error-free.</li>
+              <li>Any warranty regarding the accuracy, reliability, or completeness of any content on the Platform.</li>
+              <li>Any warranty that defects in the Platform will be corrected.</li>
+            </ul>
+            <p>
+              Tutorial content is provided for educational purposes only. We do not warrant that following any tutorial
+              will result in any particular outcome, employment opportunity, or professional qualification.
+            </p>
+            <p>
+              You use the Platform entirely at your own risk. You are solely responsible for any damage to your computer system,
+              loss of data, or other harm resulting from your use of the Platform.
+            </p>
+          </div>
+        </section>
+
+        <!-- ── Section 9 ── -->
+        <section class="terms-section" id="s9" aria-labelledby="s9-h">
+          <div class="ts-num" aria-hidden="true">09</div>
+          <h2 class="ts-title" id="s9-h">Limitation of Liability</h2>
+          <div class="ts-body">
+            <p>
+              To the maximum extent permitted by applicable law, in no event shall Veltrix IDE, its operator, affiliates,
+              licensors, service providers, employees, agents, officers, or directors be liable for any:
+            </p>
+            <ul>
+              <li>Indirect, incidental, special, consequential, or punitive damages.</li>
+              <li>Loss of profits, revenue, data, goodwill, or other intangible losses.</li>
+              <li>Damages resulting from your inability to access or use the Platform.</li>
+              <li>Damages resulting from unauthorised access to or alteration of your data.</li>
+              <li>Damages resulting from any content obtained through the Platform.</li>
+              <li>Damages resulting from any interruption or cessation of the Platform.</li>
+            </ul>
+            <div class="ts-highlight">
+              <p>
+                <strong>Aggregate Liability Cap:</strong> In jurisdictions where limitation of liability is permitted,
+                our total aggregate liability to you for all claims arising out of or relating to these Terms or your
+                use of the Platform shall not exceed <strong>GBP £50 (fifty pounds sterling)</strong>.
+              </p>
+            </div>
+            <p>
+              Some jurisdictions do not allow the exclusion or limitation of incidental or consequential damages,
+              so the above limitations may not apply to you to the extent prohibited by law.
+            </p>
+          </div>
+        </section>
+
+        <!-- ── Section 10 ── -->
+        <section class="terms-section" id="s10" aria-labelledby="s10-h">
+          <div class="ts-num" aria-hidden="true">10</div>
+          <h2 class="ts-title" id="s10-h">Indemnification</h2>
+          <div class="ts-body">
+            <p>
+              You agree to defend, indemnify, and hold harmless Veltrix IDE, its operator, and their respective officers,
+              directors, employees, contractors, agents, licensors, suppliers, and successors from and against any claims,
+              liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable legal fees)
+              arising out of or relating to:
+            </p>
+            <ul>
+              <li>Your violation of these Terms and Conditions.</li>
+              <li>Your use of the Platform, including content you create, store, or transmit via the Platform.</li>
+              <li>Your violation of any third-party rights, including intellectual property or privacy rights.</li>
+              <li>Any misrepresentation made by you in connection with the Platform.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ── Section 11 ── -->
+        <section class="terms-section" id="s11" aria-labelledby="s11-h">
+          <div class="ts-num" aria-hidden="true">11</div>
+          <h2 class="ts-title" id="s11-h">Privacy &amp; Cookies</h2>
+          <div class="ts-body">
+            <p>
+              Your use of Veltrix IDE is also governed by our <a href="./privacy.html">Privacy Policy</a>,
+              which is incorporated into these Terms by reference. The Privacy Policy explains how we handle any
+              data associated with your use of the Platform.
+            </p>
+            <p>
+              <strong>Cookies:</strong> Veltrix IDE does not use first-party tracking cookies. However, third-party services
+              embedded in the Platform (including YouTube and Google AdSense) may set cookies on your device. These
+              cookies are governed by the respective third parties&apos; privacy policies.
+            </p>
+            <p>
+              <strong>localStorage:</strong> We use your browser&apos;s <code>localStorage</code> API to persist your theme
+              preference, account data, and project files. This data never leaves your device.
+            </p>
+          </div>
+        </section>
+
+        <!-- ── Section 12 ── -->
+        <section class="terms-section" id="s12" aria-labelledby="s12-h">
+          <div class="ts-num" aria-hidden="true">12</div>
+          <h2 class="ts-title" id="s12-h">Changes to Terms</h2>
+          <div class="ts-body">
+            <p>
+              We reserve the right to update or modify these Terms at any time at our sole discretion. When we make changes,
+              we will update the &ldquo;Last Updated&rdquo; date at the top of this page.
+            </p>
+            <p>
+              If the changes are material, we will make reasonable efforts to notify users (for example, by displaying a
+              prominent notice on the homepage). However, it is your responsibility to review these Terms periodically to
+              stay informed of any updates.
+            </p>
+            <p>
+              Your continued use of Veltrix IDE after any changes to these Terms constitutes your acceptance of the revised
+              Terms. If you do not agree to the updated Terms, you must stop using the Platform immediately.
+            </p>
+          </div>
+        </section>
+
+        <!-- ── Section 13 ── -->
+        <section class="terms-section" id="s13" aria-labelledby="s13-h">
+          <div class="ts-num" aria-hidden="true">13</div>
+          <h2 class="ts-title" id="s13-h">Termination</h2>
+          <div class="ts-body">
+            <p>
+              We reserve the right to suspend or terminate your access to all or any part of Veltrix IDE at any time,
+              with or without notice, for any reason, including but not limited to a breach of these Terms.
+            </p>
+            <p>
+              Upon termination:
+            </p>
+            <ul>
+              <li>Your right to use the Platform ceases immediately.</li>
+              <li>Provisions of these Terms that by their nature should survive termination shall remain in effect,
+                  including sections on Intellectual Property, Disclaimers, Limitation of Liability, Indemnification,
+                  and Governing Law.</li>
+            </ul>
+            <p>
+              You may stop using the Platform at any time. To remove your local account data, clear the
+              <code>localStorage</code> for this site in your browser settings.
+            </p>
+          </div>
+        </section>
+
+        <!-- ── Section 14 ── -->
+        <section class="terms-section" id="s14" aria-labelledby="s14-h">
+          <div class="ts-num" aria-hidden="true">14</div>
+          <h2 class="ts-title" id="s14-h">Governing Law &amp; Dispute Resolution</h2>
+          <div class="ts-body">
+            <p>
+              These Terms and Conditions and any dispute or claim arising out of or in connection with them or their
+              subject matter or formation (including non-contractual disputes or claims) shall be governed by and
+              construed in accordance with the laws of <strong>England and Wales</strong>, United Kingdom.
+            </p>
+            <p>
+              Any disputes arising from or in connection with these Terms shall be subject to the exclusive jurisdiction
+              of the courts of <strong>England and Wales</strong>. If you are accessing the Platform from a different
+              jurisdiction, you do so on your own initiative and are responsible for compliance with applicable local laws.
+            </p>
+            <p>
+              Before initiating any formal legal proceedings, we encourage you to contact us directly at
+              <a href="mailto:hello@veltrix-ide.dev">hello@veltrix-ide.dev</a> so we can attempt to resolve
+              any dispute informally.
+            </p>
+          </div>
+        </section>
+
+        <!-- ── Section 15 ── -->
+        <section class="terms-section" id="s15" aria-labelledby="s15-h">
+          <div class="ts-num" aria-hidden="true">15</div>
+          <h2 class="ts-title" id="s15-h">Contact Us</h2>
+          <div class="ts-body">
+            <p>
+              If you have any questions, concerns, or requests regarding these Terms and Conditions, please do not
+              hesitate to get in touch. We aim to respond to all enquiries within 48 hours.
+            </p>
+          </div>
+          <div class="terms-contact-card">
+            <h3>Get in Touch</h3>
+            <p>
+              <strong>Veltrix IDE</strong> — operated by Mohammad Khan<br>
+              <strong>Email:</strong> <a href="mailto:hello@veltrix-ide.dev">hello@veltrix-ide.dev</a><br>
+              <strong>GitHub:</strong> <a href="https://github.com/veltrix-ide" target="_blank" rel="noopener noreferrer">github.com/veltrix-ide</a><br>
+              <strong>Website:</strong> <a href="https://veltrix-ide.vercel.app">veltrix-ide.vercel.app</a>
+            </p>
+            <a href="./contact.html" class="btn btn-primary btn-sm">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Send a Message
+            </a>
+          </div>
+        </section>
+
+      </article>
+    </div><!-- /terms-layout -->
+
+  </div><!-- /container -->
+</main>
+
+<!-- ══════════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div>
+        <div class="f-brand">
+          <div class="f-logo" aria-hidden="true">
+            <svg fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+            </svg>
+          </div>
+          <span>Veltrix IDE</span>
+        </div>
+        <p class="f-tag">The browser-based IDE for modern web developers. No install. No setup. Just code.</p>
+      </div>
+
+      <div class="f-col">
+        <h4>Pages</h4>
+        <a href="./index.html">Home</a>
+        <a href="./tutorials.html">Tutorials</a>
+        <a href="./lab.html">Lab</a>
+        <a href="./about.html">About</a>
+      </div>
+
+      <div class="f-col">
+        <h4>Legal</h4>
+        <a href="./privacy.html">Privacy Policy</a>
+        <a href="./terms-and-conditions.html" aria-current="page">Terms &amp; Conditions</a>
+        <a href="./contact.html">Contact Us</a>
+      </div>
+
+      <div class="f-col">
+        <h4>Tech</h4>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener">HTML5</a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener">CSS3</a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener">Vanilla JS</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p class="f-copy">&copy; 2026 Veltrix IDE &middot; Mohammad Khan</p>
+      <div class="f-legal">
+        <a href="./privacy.html">Privacy Policy</a>
+        <a href="./terms-and-conditions.html" aria-current="page">Terms &amp; Conditions</a>
+        <a href="./contact.html">Contact</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════════════════════
+     MODALS
+══════════════════════════════════════════════════════════ -->
+<div id="modal-login" class="modal" role="dialog" aria-modal="true" aria-labelledby="login-h">
+  <div class="modal-box">
+    <div class="modal-hd">
+      <h2 id="login-h">Log In</h2>
+      <button class="modal-x" aria-label="Close login dialog">&times;</button>
+    </div>
+    <form id="form-login" class="modal-form" novalidate>
+      <label class="f-lbl">Username<input type="text" name="username" class="f-inp" placeholder="your_username" autocomplete="username" required></label>
+      <label class="f-lbl">Password<input type="password" name="password" class="f-inp" placeholder="••••••••" autocomplete="current-password" required></label>
+      <div id="err-login" class="f-err" style="display:none"></div>
+      <button type="submit" class="btn btn-primary btn-full">Log In</button>
+      <p class="modal-ft">No account? <button type="button" class="link-btn" data-modal="modal-signup">Sign up free &rarr;</button></p>
+    </form>
+  </div>
+</div>
+
+<div id="modal-signup" class="modal" role="dialog" aria-modal="true" aria-labelledby="signup-h">
+  <div class="modal-box">
+    <div class="modal-hd">
+      <h2 id="signup-h">Create Account</h2>
+      <button class="modal-x" aria-label="Close signup dialog">&times;</button>
+    </div>
+    <form id="form-signup" class="modal-form" novalidate>
+      <label class="f-lbl">Full Name<input type="text" name="fullname" class="f-inp" placeholder="Your Name" autocomplete="name" required></label>
+      <label class="f-lbl">Username<input type="text" name="username" class="f-inp" placeholder="choose_username" autocomplete="username" required></label>
+      <label class="f-lbl">Email<input type="email" name="email" class="f-inp" placeholder="you@example.com" autocomplete="email" required></label>
+      <label class="f-lbl">Password <small style="color:var(--t3);font-weight:400">(min 6 chars)</small><input type="password" name="password" class="f-inp" placeholder="••••••••" autocomplete="new-password" required></label>
+      <div id="err-signup" class="f-err" style="display:none"></div>
+      <button type="submit" class="btn btn-primary btn-full">Create Account</button>
+      <p class="modal-ft">Have an account? <button type="button" class="link-btn" data-modal="modal-login">Log in &rarr;</button></p>
+    </form>
+  </div>
+</div>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<!-- ══════════════════════════════════════════════════════
+     SCRIPTS
+══════════════════════════════════════════════════════════ -->
+<script src="./script.js"></script>
+
+<!-- Active TOC link highlight on scroll -->
+<script>
+(function () {
+  var tocLinks = document.querySelectorAll('.toc-link');
+  var sections  = document.querySelectorAll('.terms-section');
+  if (!tocLinks.length || !sections.length) return;
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        var id = entry.target.id;
+        tocLinks.forEach(function (l) {
+          l.classList.toggle('active', l.getAttribute('href') === '#' + id);
+        });
+      }
+    });
+  }, { rootMargin: '-64px 0px -60% 0px', threshold: 0 });
+
+  sections.forEach(function (s) { observer.observe(s); });
+})();
+</script>
+
+</body>
+</html>
